@@ -1,0 +1,104 @@
+html, body, #layout {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 20px;
+  color: #005da4;
+  margin-bottom: 0;
+}
+
+p {
+  color: #333;
+  margin-top: 5px;
+}
+
+#nav a {
+    padding: 1px 10px;
+    display: block;
+    float: left;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+#content {
+    margin-top: 58px;
+    padding: 10px 20px;
+}
+
+#nav {
+    background: #333;
+    border-right: 3px solid #222;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 38px;
+}
+
+a.active::after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 9px;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#app input {
+  border-radius: 100px;
+  border: 1px solid #dfdfdf;
+  padding: 10px;
+  outline: none;
+}
+
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.character {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  display: block;
+  background: #f7f7f7;
+  border-radius: 3px;
+}
+
+.character h2 {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: "Helvetica", sans-serif;
+  font-weight: normal;
+  background: #333;
+  color: #fff;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.character img {
+  border-radius: 100%;
+  padding: 3px;
+  border: 1px solid #dfdfdf;
+  background: #fafafa;
+  margin: 0 auto;
+  display: block;
+}

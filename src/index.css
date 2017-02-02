@@ -102,3 +102,7 @@ h2 {
   margin: 0 auto;
   display: block;
 }
+
+#characters a {
+  text-decoration: none;
+}

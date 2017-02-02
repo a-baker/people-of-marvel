@@ -7,6 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from './components/App';
 import Homepage from './components/Homepage';
 import Layout from './components/Layout';
+import CharacterInfo from './components/CharacterInfo';
 
 import 'normalize.css';
 import './index.css';
@@ -18,8 +19,10 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route path="/" component={Layout}>
         <IndexRoute component={Homepage} />
-        <Route path="characters" component={App}>
-        </Route> 
+        <Route path="/characters" component={App}>
+        </Route>
+        <Route path="/characters/:id" component={CharacterInfo}>
+        </Route>
       </Route>
     </Router>
   </MuiThemeProvider>,

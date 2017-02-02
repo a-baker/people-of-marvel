@@ -10,10 +10,10 @@ class Layout extends Component {
           <IndexLink to="/" activeClassName="active">
             <FlatButton style={{color: 'white'}} label="homepage" />
           </IndexLink>
-          <Link to="characters" activeClassName="active">
+          <Link to="/characters" activeClassName="active">
             <FlatButton style={{color: 'white'}} label="Characters" />
           </Link>
-        </div>        
+        </div>
         <section id="content">
           {this.props.children}
         </section>

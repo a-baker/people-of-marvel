@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import TextField from 'material-ui/TextField';
 import { List } from 'material-ui/List';
+import { Link } from 'react-router';
 
 import Character from './Character';
 
@@ -15,12 +16,12 @@ class App extends Component {
       characters: []
     };
   }
-  
+
   handleInput(e) {
     let search = e.target.value;
     this.updateSearch(search);
   }
-  
+
   updateSearch(s){
     if(s.length) {
       axios.get('https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=' + s + '&limit='+ CHARACTER_LIMIT +'&apikey=359f52fff02b09fb20aaf446c4ce98bd')
@@ -35,22 +36,29 @@ class App extends Component {
       });
     }
   }
-  
+
+  alertCharacterInfo(char) {
+    console.log(char);
+  }
+
   render() {
     var characters =
       this.state.characters.map((character, index) => {
-        return <Character key={index} data={character} />;
+        return (
+          <Link key={index} to={`/characters/${character.id}`}>
+            <Character data={character} />
+          </Link>
+        );
       });
-    
+
     return (
       <div id="app">
         <form>
-        {/*<input type="text" value={this.state.search} onChange={this.handleInput.bind(this)} placeholder="Search for a character..." />*/}
-        <TextField
-          onChange={this.handleInput.bind(this)}
-          hintText="Search for a character..."
-          floatingLabelText="Character"
-         />
+          <TextField
+            onChange={this.handleInput.bind(this)}
+            hintText="Search for a character..."
+            floatingLabelText="Character"
+           />
         </form>
         <div id="characters">
           <List>

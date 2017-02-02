@@ -5,10 +5,10 @@ import Avatar from 'material-ui/Avatar';
 class Character extends Component {
   render() {
     return (
-   
-      <ListItem 
-      primaryText={this.props.data.name} 
-      leftAvatar={<Avatar src={this.props.data.thumbnail.path + "/standard_large." + this.props.data.thumbnail.extension} />} 
+
+      <ListItem
+      primaryText={this.props.data.name}
+      leftAvatar={<Avatar src={this.props.data.thumbnail.path + "/standard_large." + this.props.data.thumbnail.extension} />}
       />
     );
   }
